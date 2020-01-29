@@ -1,9 +1,7 @@
-import React, { Component } from "react";
-import "./app.css";
+import React, { Component } from 'react';
+import './app.css';
 
-import AppBar from "@material-ui/core/AppBar";
-import Toolbar from "@material-ui/core/Toolbar";
-import TypoGraphy from "@material-ui/core/Typography";
+import { AppBar, Toolbar, Typography, Tabs, Tab } from '@material-ui/core';
 
 export default class App extends Component {
 	componentDidMount() {}
@@ -11,15 +9,21 @@ export default class App extends Component {
 	render() {
 		return (
 			<div>
-				<AppBar color="primary" position="static">
+				<AppBar color="primary" position="fixed">
 					<Toolbar>
-						<TypoGraphy variant="h5" color="inherit">
+						<Typography variant="h5" color="inherit">
 							Adrinet
-						</TypoGraphy>
+						</Typography>
+						<Tabs
+							indicatorColor="primary"
+							textColor="primary"
+							centered
+						>
+							<Tab label="Home" />
+						</Tabs>
 					</Toolbar>
 				</AppBar>
 			</div>
 		);
 	}
 }
-//
