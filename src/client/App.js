@@ -1,26 +1,23 @@
 import React, { Component } from "react";
 import "./app.css";
-import ReactImage from "./react.png";
+
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import TypoGraphy from "@material-ui/core/Typography";
 
 export default class App extends Component {
-	state = { username: null };
-
-	componentDidMount() {
-		fetch("/api/getUsername")
-			.then(res => res.json())
-			.then(user => this.setState({ username: user.username }));
-	}
+	componentDidMount() {}
 
 	render() {
-		const { username } = this.state;
 		return (
 			<div>
-				{username ? (
-					<h1>{`Hello ${username}`}</h1>
-				) : (
-					<h1>Loading.. please wait!</h1>
-				)}
-				<img src={ReactImage} alt="react" />
+				<AppBar color="primary" position="static">
+					<Toolbar>
+						<TypoGraphy variant="h5" color="inherit">
+							Adrinet
+						</TypoGraphy>
+					</Toolbar>
+				</AppBar>
 			</div>
 		);
 	}
