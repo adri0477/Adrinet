@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import AppBarSpacer from './Layouts/AppBarSpacer';
 import Header from './Layouts/Header';
 import Home from './Pages/Home';
+import About from './Pages/About';
 
 export default class App extends Component {
 	constructor(props) {
@@ -17,7 +18,9 @@ export default class App extends Component {
 		if (selectedTab === '0') {
 			return <Home />;
 		}
-		return null;
+		if (selectedTab === '1') {
+			return <About />;
+		}
 	};
 
 	render() {
