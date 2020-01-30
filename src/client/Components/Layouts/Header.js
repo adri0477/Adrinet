@@ -1,29 +1,27 @@
 /* eslint-disable arrow-parens */
-import React, { Component } from 'react';
+import React from 'react';
 
-import { AppBar, Toolbar, Typography, Tab, Tabs } from '@material-ui/core';
+import { AppBar, Toolbar, Typography, Tab, Tabs, Box } from '@material-ui/core';
 
-// eslint-disable-next-line react/prefer-stateless-function
-export default class Header extends Component {
-	render() {
-		const { selectedTab, handleTabChange } = this.props;
-		return (
-			<AppBar color="primary" position="fixed">
-				<Toolbar>
-					<Typography variant="h6" color="inherit">
-						Adrinet
-					</Typography>
-					<Tabs
-						value={selectedTab}
-						onChange={handleTabChange}
-						centered
-					>
+const Header = props => {
+	const { selectedTab, handleTabChange } = props;
+
+	return (
+		<AppBar color="primary" position="fixed">
+			<Toolbar>
+				<Typography variant="h6" color="inherit">
+					Adrinet
+				</Typography>
+				<Box mx="auto">
+					<Tabs value={selectedTab} onChange={handleTabChange}>
 						<Tab label="HOME" value="0" />
-
+						<Tab label="LINKS" value="2" />
 						<Tab label="ABOUT" value="1" />
 					</Tabs>
-				</Toolbar>
-			</AppBar>
-		);
-	}
-}
+				</Box>
+			</Toolbar>
+		</AppBar>
+	);
+};
+
+export default Header;
