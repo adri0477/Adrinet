@@ -2,9 +2,9 @@
 	"presets": ["@babel/preset-env", "@babel/preset-react"],
 	"plugins": [
 		[
-			"import",
+			"@babel/plugin-proposal-class-properties",
 			{
-				"libraryName": "@babel/plugin-proposal-class-properties"
+				"loose": true
 			}
 		],
 		[
@@ -14,7 +14,5 @@
 			},
 			"pluginImport"
 		]
-
-		/*"babel-plugin-import"*/
 	]
 }
