@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Link } from '@material-ui/core';
+import { Typography, Link, Box } from '@material-ui/core';
 
 const Links = () => {
 	return (
@@ -28,9 +28,19 @@ const Links = () => {
 			<Typography variant="body1" color="inherit">
 				Now all new maple documents will load Gym and plots libraries.
 			</Typography>
-			<Link href="downloads/GymProfile.mapleprofile" download>
-				Maple profile
-			</Link>
+			<Box>
+				<Link href="downloads/GymProfile.mapleprofile" download>
+					Maple profile
+				</Link>
+			</Box>
+			<Box>
+				<Link
+					href="https://www.maplesoft.com/support/help/Maple/view.aspx?path=worksheet/documenting/userprofile"
+					target="_blank"
+				>
+					Maple documentation on user profiles.
+				</Link>
+			</Box>
 		</>
 	);
 };
