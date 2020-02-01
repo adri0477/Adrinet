@@ -24,7 +24,7 @@ export default class App extends Component {
 			case '1':
 				return <About />;
 			case '2':
-				return <Typography variant="h3">Coming soon</Typography>;
+				return <Links />;
 
 			default:
 				console.warn('Selected tab is out of range');
